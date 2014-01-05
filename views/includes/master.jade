@@ -1,0 +1,70 @@
+doctype 5
+html(lang="en", class="no-js")
+	head
+	title ZSupport - A live chat for website on cloud
+	meta(charset="utf-8")
+	meta(name="robots", content="index,follow")		
+	<!-- Mobile Specific Metas -->
+	meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+
+	<!-- Stylesheets -->
+	link(rel="stylesheet", href="/stylesheets/style.css")
+	link(rel="stylesheet", href="/stylesheets/skeleton.css")
+
+		<!-- Icons
+		<link rel="shortcut icon" href="http://zsupport.me/images/icons/favicon.ico">
+		<link rel="apple-touch-icon" href="http://zsupport.me/images/icons/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="http://zsupport.me/images/icons/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="http://zsupport.me/images/icons/apple-touch-icon-114x114.png" /> -->
+
+		<!-- Chartbeat -->
+		<!-- jQuery and jQuery fallback -->
+	script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+	<!-- jQuery Scripts -->		
+	link(href="http://fonts.googleapis.com/css?family=Kite+One", rel="stylesheet", type="text/css")
+	link(href="http://fonts.googleapis.com/css?family=Dosis", rel="stylesheet", type="text/css")	
+body(class="home blog")
+	div#fb-root
+	script (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=439503519469115"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));
+	.container
+			div(class="sixteen columns logo")
+				a( href="http://zsupport.me")
+					img( src="images/logo-web.png", alt="ZSupport")
+				.basecamp
+					a(href="https://admin.zsupport.me", target="new")
+						p Client Login
+			div(class="sixteen columns")
+				#nav
+					include menu
+				block content					
+				block register
+			div(class="sixteen columns")
+				div#social( class="section center")					
+				div(class="sixteen columns content")
+					include footer					
+		<!-- HTML5 Shiv -->
+	script( src="http://html5shiv.googlecode.com/svn/trunk/html5.js" )
+	<!-- Infield Label-->
+		
+	script( src="/javascripts/jquery.infieldlabel.js" )
+	script( src="/javascripts/jquery.validate.min.js" )	
+	script( src="/javascripts/easyxdm/json2.js")
+	script( src="/javascripts/easyxdm/easyXDM.min.js")
+	script( src="/javascripts/app.js")	
+	script( src="/javascripts/socketio/socket.io.js")	
+	script(type='text/javascript')
+		if (window.zsupport) {
+			window.zsupport.loadR();
+		}
+		else{
+			window.zsid='519651eb5b97354a0f000002';
+			var body=document.getElementsByTagName('body')[0],sTag=document.createElement('script'),srcTag=document.createAttribute('src'),typeJs = document.createAttribute('type');
+			typeJs.value="text/javascript";srcTag.value='http://api.zsupport.me/plugins/plugin.js';sTag.setAttributeNode(srcTag);sTag.setAttributeNode(typeJs);body.appendChild(sTag);
+		}
+	script
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-40310393-1', 'zsupport.me');
+		ga('send', 'pageview');

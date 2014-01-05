@@ -1,0 +1,126 @@
+doctype 5
+html(lang="en", class="no-js")
+	head
+	title ZSupport - A live chat for website on cloud
+	meta(charset="utf-8")
+	meta(name="robots", content="index,follow")
+	<!-- Mobile Specific Metas -->
+	meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+
+	<!-- Stylesheets -->
+	link(rel="stylesheet", href="/stylesheets/style.css")
+	link(rel="stylesheet", href="/stylesheets/skeleton.css")
+	link(rel="stylesheet", href="/stylesheets/flexslider.css")
+
+		<!-- Icons
+		<link rel="shortcut icon" href="http://zsupport.me/images/icons/favicon.ico">
+		<link rel="apple-touch-icon" href="http://zsupport.me/images/icons/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="http://zsupport.me/images/icons/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="http://zsupport.me/images/icons/apple-touch-icon-114x114.png" /> -->
+
+		<!-- Chartbeat -->
+		<!-- jQuery and jQuery fallback -->
+	script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+	<!-- jQuery Scripts -->
+	link(href="http://fonts.googleapis.com/css?family=Kite+One", rel="stylesheet", type="text/css")
+	link(href="http://fonts.googleapis.com/css?family=Dosis", rel="stylesheet", type="text/css")
+body(class="home blog")
+	div#fb-root	
+	script (function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=439503519469115"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));
+	.container
+
+				div(class="sixteen columns logo")
+					a( href="http://zsupport.me")
+						img( src="images/logo-web.png", alt="ZSupport")
+					.basecamp
+						a(href="http://admin.zsupport.me", target="new")
+							p Client Login
+				div(class="sixteen columns")
+					#nav
+						include includes/menu
+
+				div(class="sixteen columns content")
+					.section
+							div(class="column")
+								div(class="flexslider")
+									ul.slides										
+										li		
+												a(href="#frmRegister", title="Click here to go to register form")
+													div.slide-anchor									
+												img(src="images/slide1.png")
+																										
+										li										
+											a(href="#frmRegister", title="Click here to go to register form")
+													div.slide-anchor
+												img(src="images/slide2.png")					
+										li
+											a(href="#frmRegister", title="Click here to go to register form")
+													div.slide-anchor
+												img(src="images/slide3.png")					
+					div#about(class="section clearfix")
+
+						h1 Simple, Flexible, Cross Platform
+
+						p(class="background") ZSupport is a live chat platform for website rely on cloud computing. We make it to become simple for use and effective for either small business or a customize version for any business's scope
+
+						div(class="row clearfix")
+							div( class="one-third column alpha")
+								h2 Integration
+								a( href="/features")
+									img(src="images/integration.png", alt="Websites")
+
+								p You just register an account and verify it. Integration is very simple but you don't need waste your time for this, Our supporter will help you how to integrated with your site up and running.
+
+							div( class="one-third column")
+								h2 Pricing
+								a(href="/pricing")
+									img(src="images/pricing.png", alt="Pricing")
+
+								p For small businesses, cost for customer support should be as less as posible. So we provide a many packages which suite to your business. Ask us for a consultant if you don't think our original package suitable to your business
+
+							div( class="one-third column omega")
+
+								h2 More...
+								a(href="/about")
+									img(src="images/stable.png", alt="Print")
+
+								p Our live chat based on cloud computing so that we will easy to scale it larger and reliable. Based on your chat, we also have modules for language natural processing for analytics to find out advices for business.
+
+				include includes/register
+				div(class="sixteen columns")
+					div#social( class="section center")
+					div(class="content")
+						include includes/footer
+		<!-- HTML5 Shiv -->
+	script( src="http://html5shiv.googlecode.com/svn/trunk/html5.js" )
+	<!-- Infield Label-->
+
+	script( src="/javascripts/jquery.infieldlabel.js" )
+	script( src="/javascripts/jquery.validate.min.js" )
+	script( src="/javascripts/easyxdm/json2.js")
+	script( src="/javascripts/easyxdm/easyXDM.min.js")
+	script( src="/javascripts/socket.io.js")
+	script( src="/javascripts/app.js")
+	script( src="/javascripts/jquery.flexslider-min.js")
+	script(type='text/javascript')
+		if (window.zsupport) {
+			window.zsupport.loadR();
+		}
+		else{
+			window.zsid='519651eb5b97354a0f000002';
+			var body=document.getElementsByTagName('body')[0],sTag=document.createElement('script'),srcTag=document.createAttribute('src'),typeJs = document.createAttribute('type');
+			typeJs.value="text/javascript";srcTag.value='http://api.zsupport.me/plugins/plugin.js';sTag.setAttributeNode(srcTag);sTag.setAttributeNode(typeJs);body.appendChild(sTag);
+		}		
+		$(window).load(function() {
+			$('.flexslider').flexslider({
+				animation: "fade",
+				directionNav: false,
+			});
+		});
+	script
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-40310393-1', 'zsupport.me');
+		ga('send', 'pageview');	

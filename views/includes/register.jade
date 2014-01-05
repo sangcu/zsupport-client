@@ -1,0 +1,26 @@
+div( class="sixteen columns")
+	div#clients(class="section clearfix")
+		h2 Create your account, It's simple
+
+	form#frmRegister
+		div( class="row")
+				div(class="five columns alpha")
+					div
+						label(for="fullname", style="opacity: 1;") Your Name*
+						input(type="text", name="fullname", id="fullname", value="" ,class="required requiredField")
+				div(class="five columns alpha")
+					div
+						label( for="website") Website*
+						input(type="text", name="website", id="website" ,value="", class="required requiredField")
+				div(class="five columns alpha")
+					div
+						label(for="email") Email*
+						input(type="text", name="email", id="email", value="", class="required requiredField email")
+		div
+			div
+				div#error(style="display:none")
+					h3(class="error") An error has responsed from server.
+				input(id="btnRegister", type="submit", value="Register")
+
+	div#sucessful(style="display:none")
+		h3 That great!. We have just sent an email to you, so please check your mailbox and click on activate link in email.

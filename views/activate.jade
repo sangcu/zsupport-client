@@ -1,0 +1,31 @@
+extends includes/master
+block content
+	div.section
+		b(style="font-weight:bolder") Activate account.
+		p#activating Please enter password to secure your account on ZSupport.Me
+		form#frmActivate
+			div( class="row")
+					div(class="five columns alpha")
+						div
+							label(for="password", style="opacity: 1;") Your Password*
+							input(type="password",pwstrength="true", name="password", id="password", value="", equalfrom="#confirmpass" ,class="required requiredField")
+					div(class="five columns alpha")
+						div
+							label( for="confirmpass") Retype your password*
+							input(type="password",pwstrength="true", equalfrom="#password", name="confirmpass", id="confirmpass" ,value="", class="required requiredField")	                  		
+			div.row
+				div.password-meter(style="display:none")
+					div.password-meter-message
+					div.password-meter-bg
+						div.password-meter-bar
+					
+			div
+				div
+					div#error(class="alert alert-error", style="display:none")
+						h3(class="error") An error has responsed from server. 
+				input(id="btnActivate", type="submit", value="Activate")			
+			div(class="alert alert-success",style="display:none")
+				br
+				p Congratulation! you have got an account on ZSupport.Me already, So we will redirect you to login section in
+					span.countdown	10				
+			p(class="alert alert-info",style="display:none") Hold On!!!. Before your leave this, keep in your mind login consist of email you provided and password is what you just typed above.
