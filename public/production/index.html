@@ -18,6 +18,8 @@
     <script type="text/javascript" src="js/plugins.min.js"></script>
     <script type="text/javascript" src="js/ember.min.js"></script>
     <script type="text/javascript" src="js/app.min.js"></script>
+
+    
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -27,6 +29,22 @@
       ga('create', 'UA-40310393-1', 'zsupport.me');
       ga('send', 'pageview');
 
+      if (window.zsupport) {
+      window.zsupport.loadR();
+    }
+    else{
+      window.zsid='52cc1b2c80c22d1811000002';
+      window.zsserver="http://api.zsupport.me";
+      window.zsport=8080;
+      var body=document.getElementsByTagName('body')[0],sTag=document.createElement('script'),srcTag=document.createAttribute('src'),typeJs = document.createAttribute('type');
+      typeJs.value="text/javascript";srcTag.value=window.zsserver+':'+window.zsport+'/plugins/plugin.js';sTag.setAttributeNode(srcTag);sTag.setAttributeNode(typeJs);body.appendChild(sTag);
+    }   
+    $(window).load(function() {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        directionNav: false,
+      });
+    });     
     </script>
 </body>
 </html>
